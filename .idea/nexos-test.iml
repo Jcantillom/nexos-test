@@ -14,6 +14,19 @@
   </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/.dockers/postgresql/data/pg_commit_ts" />
+      <excludeFolder url="file://$MODULE_DIR$/.dockers/postgresql/data/pg_dynshmem" />
+      <excludeFolder url="file://$MODULE_DIR$/.dockers/postgresql/data/pg_logical/mappings" />
+      <excludeFolder url="file://$MODULE_DIR$/.dockers/postgresql/data/pg_logical/snapshots" />
+      <excludeFolder url="file://$MODULE_DIR$/.dockers/postgresql/data/pg_notify" />
+      <excludeFolder url="file://$MODULE_DIR$/.dockers/postgresql/data/pg_replslot" />
+      <excludeFolder url="file://$MODULE_DIR$/.dockers/postgresql/data/pg_serial" />
+      <excludeFolder url="file://$MODULE_DIR$/.dockers/postgresql/data/pg_snapshots" />
+      <excludeFolder url="file://$MODULE_DIR$/.dockers/postgresql/data/pg_stat" />
+      <excludeFolder url="file://$MODULE_DIR$/.dockers/postgresql/data/pg_stat_tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/.dockers/postgresql/data/pg_tblspc" />
+      <excludeFolder url="file://$MODULE_DIR$/.dockers/postgresql/data/pg_twophase" />
+      <excludeFolder url="file://$MODULE_DIR$/.dockers/postgresql/data/pg_wal/archive_status" />
       <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.10 (nexos-test)" jdkType="Python SDK" />

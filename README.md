@@ -1,6 +1,8 @@
 # Proyecto Nexos: Carga de Datos y Consulta de Inventario
 
-Este proyecto ofrece una solución efectiva para simplificar y automatizar el proceso de cargar datos desde archivos CSV a una base de datos PostgreSQL dockerizada. El objetivo central es proporcionar una solución eficiente para importar, almacenar y consultar información estructurada desde archivos CSV, aprovechando una base de datos sólida y escalable.
+Este proyecto ofrece una solución efectiva para simplificar y automatizar el proceso de cargar datos desde archivos CSV
+a una base de datos PostgreSQL dockerizada. El objetivo central es proporcionar una solución eficiente para importar,
+almacenar y consultar información estructurada desde archivos CSV, aprovechando una base de datos sólida y escalable.
 
 ## Características Destacadas
 
@@ -18,7 +20,7 @@ Este proyecto ofrece una solución efectiva para simplificar y automatizar el pr
 
 1. **Clonar el Repositorio**:
    ```bash
-   git clone <URL del repositorio>
+   git clone https://github.com/cantillo16/nexos-test.git
    ```
 
 2. **Crear un Entorno Virtual**:
@@ -40,10 +42,16 @@ Este proyecto ofrece una solución efectiva para simplificar y automatizar el pr
    ```bash
    python manage.py migrate
    ```
+6. **Cargar los Datos Iniciales**:
+   ```bash
+   python src/utils/load_data.py
 
-6. **Iniciar el Servidor**:
+   ```
+7. **Iniciar el Servidor**:
    ```bash
    python manage.py runserver
    ```
 
-Una vez que el servidor esté en funcionamiento, se abrirá automáticamente una pestaña en tu navegador con la dirección http://127.0.0.1:8000/. En esta página, encontrarás una tabla que muestra el listado de inventarios cargados en la base de datos. Además, hay un botón que te llevará a la documentación interactiva de la API mediante Swagger.
+Una vez que el servidor esté en funcionamiento, se abrirá automáticamente una pestaña en tu navegador con la
+dirección http://127.0.0.1:8000/. En esta página, encontrarás una tabla que muestra el listado de inventarios cargados
+en la base de datos. Además, hay un botón que te llevará a la documentación interactiva de la API mediante Swagger.

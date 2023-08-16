@@ -1,6 +1,6 @@
 import sys, os, django
 
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.append(os.path.join(os.path.dirname(__file__), '../../'))
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
 django.setup()
 
@@ -10,8 +10,12 @@ from src.client.models import Client
 from src.branch.models import BranchOffice
 from src.product.models import Product, Inventory
 from decimal import Decimal
+from dotenv import read_dotenv
 
-csv_file_path = '../../data.csv'
+read_dotenv(os.path.join('.env'))
+
+
+csv_file_path = 'data.csv'
 
 
 def load_data():
