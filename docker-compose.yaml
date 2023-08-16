@@ -4,13 +4,17 @@ services:
     platform: linux/amd64
     container_name: nexos-test
     build:
-        context: ./.dockers/postgresql
-        dockerfile: Dockerfile
+      context: ./.dockers/postgresql
+      dockerfile: Dockerfile
     environment:
-        POSTGRES_USER: nexos
-        POSTGRES_PASSWORD: nexos
-        POSTGRES_DB: nexos
+      POSTGRES_USER: nexos
+      POSTGRES_PASSWORD: nexos
+      POSTGRES_DB: nexos
     ports:
-        - "15432:5432"
+      - "15432:5432"
     volumes:
-      - ./data:/var/lib/postgresql/data
+      - nexos-data:/var/lib/postgresql/data
+
+volumes:
+  nexos-data:
+

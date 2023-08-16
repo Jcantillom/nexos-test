@@ -37,17 +37,24 @@ almacenar y consultar información estructurada desde archivos CSV, aprovechando
    ```bash
    pip install -r requirements.txt
    ```
-
-5. **Realizar las Migraciones**:
+5. **Crear la imagen de Docker**:
+   ```bash
+   docker-compose build  
+   ```
+6. **Iniciar el Contenedor de Docker**:
+   ```bash
+    docker-compose up -d
+    ```
+7. **Realizar las Migraciones**:
    ```bash
    python manage.py migrate
    ```
-6. **Cargar los Datos Iniciales**:
+8. **Cargar los Datos Iniciales**:
    ```bash
    python src/utils/load_data.py
 
    ```
-7. **Iniciar el Servidor**:
+9. **Iniciar el Servidor**:
    ```bash
    python manage.py runserver
    ```
