@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Inventarios</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<div class="container">
+
+
+    <h1>Lista de Inventarios</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Fecha de Inventario</th>
+            <th>GLN Cliente</th>
+            <th>GLN Sucursal</th>
+            <th>Gtin Producto</th>
+            <th>Inventario Final</th>
+            <th>Precio Unidad</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for inventory in inventories %}
+            <tr>
+                <td>{{ inventory.inventory_date }}</td>
+                <td>{{ inventory.client.GLN_Client }}</td>
+                <td>{{ inventory.branch_office.GLN_sucursal }}</td>
+                <td>{{ inventory.product.Gtin_Producto }}</td>
+                <td>{{ inventory.quantity }}</td>
+                <td>{{ inventory.product.price }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+<div class="image-container">
+    <img src="{% static 'img/1667504055843.jpeg' %}" alt="Imagen de fondo">
+</div>
+<div class="swagger-link">
+    <a href="http://127.0.0.1:8000/swagger/" target="_blank" rel="noopener noreferrer">
+        <button>Ver Documentación de Swagger</button>
+    </a>
+</div>
+</body>
+</html>

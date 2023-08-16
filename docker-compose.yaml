@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  nexos-test:
+    platform: linux/amd64
+    container_name: nexos-test
+    build:
+        context: ./.dockers/postgresql
+        dockerfile: Dockerfile
+    environment:
+        POSTGRES_USER: nexos
+        POSTGRES_PASSWORD: nexos
+        POSTGRES_DB: nexos
+    ports:
+        - "15432:5432"
+    volumes:
+      - ./.dockers/postgresql/data:/var/lib/postgresql/data
